@@ -1,0 +1,87 @@
+
+        A software for classifying earthquake sand liquefaction risk index based on standard penetration test
+        A professional tool for seismic sand liquefaction index calculation and classification based on Standard Penetration Test data.
+
+        I. Overview
+        This software provides a user-friendly interface for calculating soil liquefaction potential using standard penetration test (SPT) data. It follows the procedures outlined in "SPT-Liquefaction Classification.docx" to compute the Liquefaction Index (ILE) and determine liquefaction classification.
+
+        The application supports both manual data entry and batch processing through Excel table import, making it suitable for both individual site analysis and large-scale geotechnical investigations.
+
+        II. Features
+        1. Dual Input Modes: Supports both manual data entry and Excel table import
+        2. Batch Processing: Calculate liquefaction potential for multiple points simultaneously
+        3.Automatic Column Recognition: Intelligent identification of common column name formats in imported tables
+        4. Comprehensive Results: Displays liquefaction index, classification, and corresponding anti-liquefaction measures
+        5. Visualization: Graphical representation of safety factor distribution across soil layers
+        6. Multi-point Management: Efficiently manage and analyze data from multiple measurement points
+        7. Help Documentation: Built-in explanations of parameters, standards, and usage guidelines
+
+        III. Installation
+        Prerequisites
+        1. Python 3.7 or higher
+        2. Required packages:
+        tkinter (usually included with Python)
+        pandas
+        matplotlib
+
+        IV. Usage Guide
+
+        Manual Input Mode
+        1.Navigate to the "Manual Input" tab
+        2. Enter basic parameters:
+        Seismic Intensity (7/8/9 degrees)
+        Discrimination Depth (15m or 20m)
+        Groundwater Level Depth (dw)
+        3. Add soil layer data with:
+        Saturated soil depth (ds)
+        Measured N-value
+        Layer thickness (di)
+        Use "Add Soil Layer" or "Delete Last Layer" to adjust the number of layers
+        4. Click "Calculate" to view results
+
+        Batch Processing with Table Import
+        1. Navigate to the "Table Import" tab
+        2. Click "Browse Files" to select an Excel file containing your data
+        3. Verify column identification results (software automatically matches common column name formats)
+        4. Set calculation parameters (same as manual input)
+        5. Choose between:
+        "Calculate Selected Point" to analyze a single point
+        "Calculate All Points" to process all imported points simultaneously
+        6. View results in the "Calculation Results" tab
+
+        Managing Multiple Points
+        1. Use "Add Point" and "Delete Point" in Manual Input mode to manage multiple measurement points
+        2. Switch between points using the dropdown menu
+        3. All results are automatically saved and accessible in the Results tab
+
+         V. Calculation Methodology
+        The software follows these key steps to determine liquefaction potential:
+
+        1. Calculate Critical SPT Value (Ncr):
+        Considers saturated soil depth and groundwater level
+        Uses reference values based on seismic intensity (N0)
+
+        2. Compute Safety Factor (FS):
+        Ratio of measured N-value to critical Ncr
+
+        3. Determine Liquefaction Index (ILE):
+        Weighted sum of contributions from each soil layer
+        Incorporates layer thickness and depth-dependent weighting factors
+
+        4. Classify Liquefaction Potential:
+        Based on ILE values and selected discrimination depth:
+        For 15m depth: Slight (0<ILE≤5), Moderate (5<ILE≤15), Severe (ILE>15)
+        For 20m depth: Slight (0<ILE≤6), Moderate (6<ILE≤18), Severe (ILE>18)
+
+         VI. Interface Guide
+
+         Main Tabs
+         1. Manual Input: For entering data point-by-point
+         2. Table Import: For batch processing of multiple points from Excel files
+         3. Calculation Results: For viewing analysis results and anti-liquefaction measures
+
+         Results Interpretation
+         1. Liquefaction Index (ILE): Quantifies overall liquefaction potential
+             2. Classification: Slight/Moderate/Severe based on ILE
+         3. Safety Factor Distribution: Visualizes FS values across different soil depths
+             4. Anti-Liquefaction Measures: Recommendations based on classification and seismic fortification category
