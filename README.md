@@ -1,2 +1,7 @@
-# SPT
-A software for classifying earthquake sand liquefaction risk index based on standard penetration test
+# A software for classifying earthquake sand liquefaction risk index based on standard penetration test
+
+A professional application for assessing seismic sand liquefaction potential using Standard Penetration Test (SPT) data. This tool provides accurate calculations of Liquefaction Index (ILE) and classification results based on established geotechnical engineering methodologies, offering both manual data entry and batch processing capabilities through Excel imports. The intuitive graphical interface supports comprehensive analysis of multiple measurement points, with automatic identification of common column name formats in imported tables to streamline workflow efficiency.
+
+Equipped with robust calculation engines, the software computes critical SPT values (Ncr), safety factors (FS), and liquefaction indices while visualizing safety factor distributions across soil layers. It classifies liquefaction potential as Slight, Moderate, or Severe based on calculated ILE values, with clear discrimination criteria for both 15m and 20m depth standards. Additionally, the tool provides engineering recommendations for anti-liquefaction measures tailored to different seismic fortification categories, making it suitable for both small-scale site investigations and large geotechnical projects.
+
+Built with Python 3.10+ and leveraging tkinter, pandas, and matplotlib libraries, the software ensures cross-platform compatibility (Windows/macOS/Linux) and supports Chinese character display. Installation is straightforward through git clone and pip dependency management, with immediate usability via the command-line interface. The project welcomes contributions to enhance functionality, with a clear development workflow for feature additions and improvements.
